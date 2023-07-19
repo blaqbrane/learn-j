@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    body{
+      background-color: rgb(63, 63, 63) ;
+    }
+    .div1{
+      margin-top: 20px;
+      max-width: 400px;
+      margin: 100px auto;
+      background: black;
+      border: 1px solid rgb(192, 144, 11);
+      border-radius: 10px;
+    }
+    .div2{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn1,.btn2,.btn3{
+      
+      height: 88px;
+      width: 88px;
+      border-radius: 50%;
+      border: 1px solid rgb(192, 144, 11);
+      background-color: black;
+      color: rgb(192, 144, 11);
+     
+    }
+    .reset_btn{
+      display: flex;
+      max-width: 400px;
+      margin: auto;
+      padding: 5px 24px;
+      border: 1px solid rgb(192, 144, 11);
+      margin-top: 10px;
+      
+      border-radius: 8px;
+      background-color: rgb(31, 25, 10);
+      color:white;
+      margin-bottom: 10px;
+    }
+    .btn2{
+      margin: 6px;
+    }
+    p{
+      color: rgb(192, 144, 11);
+      padding: 2px 10px;
+    }
+    .pad1{
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <h2 style="margin-bottom: 20px; color:rgb(192, 144, 11)
+   ; text-align: center; padding-top: 6px;">Rock Paper Scissors</h2>
+    <div class="div2">
+    <button class="btn1" onclick="handleRandom('Rock')">Rock</button>
+    <button class="btn2" onclick="handleRandom('Paper')">Paper</button>
+    <button class="btn3" onclick="handleRandom('Scissor')">Scissor</button>
+  </div>
+
+    <p class="pad1" id="results"></p>
+    <p id="achieve"></p>
+    <p id="records"></p>
+    <p id="update_record"></p>
+
+    <button class="reset_btn"  onclick="handleRandom('Reset')">Reset</button>
+  </div>
+
+  <script src="modified_rock_paper.js">
+    
+  </script>
+</body>
+</html>

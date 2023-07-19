@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>Click 1</button>
+  <button class="js-btn">Click 2</button>
+  <script>
+    /// The DOM combines html and Javascript together
+
+    /// While trying to change a value using innerHTML or textContent, make sure to do it inside a function///
+
+    // ///To manipulate the DOM, we need to use the built in javascript object called 'document' which is linked to the web page, so if we modify anything in the document object it reflects on our web page
+
+    // ///1. To replace evrything  allready in our browser to something else we use
+
+    //   document.body.innerHTML = 'Blaqbrane'
+
+    // //Here document is an object which contains a property called 'body' and this 'body' is also an object that contains a property called 'innerHTML', So in simple words we went through an object called document and we accessed the 'body' property which is also an object that contains 'innerHMTL' property.
+
+
+    // ///To change the title of our web page we use
+    // document.title = 'Style'
+
+    // ///document.body gets the body tag of our html
+    // //console.log(document.body)
+
+    // /// To access or change the HTML content inside of the body tag of our html we use 
+    // console.log(document.body.innerHTML)
+
+    // /// We can also set the innerHTML to an element e.g
+    // document.body.innerHTML = '<button>Click US</button>'
+
+
+
+        //// section two///
+
+    /// To get an element from our html and put it in our javascript we use a method called 'document.querySelector()', here document is an object while querySelector() is function inside the document object, there are other methods which we would see later. e.g
+
+    /// Here the document.querySelector(), get's the firt button in our html
+
+    console.log(document.querySelector('button')) // === <button> Click 1 </button>
+
+    ///To access the content of the button,since the button is now an object we access the innerHTML property of that object. e.g below
+    const button_object = document.querySelector('button')
+    console.log(button_object.innerHTML) // === 
+
+    ///N/B: Any element you get from your html javascript converts it to an object, that object can now access other properties using the '.' notation
+
+    /// To Change the content of the button 
+    
+    //1. We get the Button from html, once we get it, it's automatically converted to an object
+
+    const first_btn = document.querySelector('button')
+
+    //2. After getting the button, which javascript has now converted to an object, we can now change or access it's value by accessing the 'innerHTML' property
+    first_btn.innerHTML = 'first_btn_value'
+    console.log( first_btn.innerHTML )
+
+          ///To access any other element or button we have to button we have to give that element a class, which ill act as a selector.///
+    
+    /// To access another button, we pass in the class of the btn as an argument into the 'querySelector'
+    const secondbtn = document.querySelector('.js-btn')
+    secondbtn.innerHTML = 'Second btn'
+
+  </script>
+</body>
+</html>

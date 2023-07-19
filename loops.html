@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    /// While loop  runs a code while a certain condition is true and stops when the condition is no longer true.
+
+    let i = 0;
+    while(i <= 4){
+      console.log(i)
+      i++
+    }
+
+    // i = 0 is the loop variables
+    // i <= 4 is the loop condition
+    // i++ is the incremental step
+
+
+    /// FOR LOOP works the same way like WHILE LOOP
+
+    for(let i = 1; i <= 5; i++){
+      console.log(i)
+    }
+
+    //// If the loop is a non standard loop, use a while loop e.g
+
+    let randomNumber = 0
+    while(randomNumber < 0.6){
+      randomNumber = Math.random()
+    }
+
+    ///Looping through an array
+    const Lists = [
+      'mango',
+      'pawpaw',
+      'orange'
+    ]
+
+    for(let i = 0; i <= Lists.length-1; i++){
+      console.log(Lists[i])
+    }
+
+    //Same as 
+    
+    for(let i = 0; i < Lists.length; i++){
+      console.log(Lists[i])
+    }
+
+    ///Accumulator Pattern
+    const num_list = ['2','3','4']
+    let total = 0 //Accumulator Variable
+    for(let i = 0; i < num_list.length; i++){
+        const item = num_list[i]
+        total+=Number(item) ///the Number() function converts the string to number
+        console.log(total) /// 9
+    }
+
+    /// Creating a new array where each item of the array is doubled.
+    const old_numss = [2,3,5]
+    let new_numss = []
+    for(let i = 0; i < old_numss.length; i++){
+      const itemss = old_numss[i]
+      
+      new_numss.push(itemss * 2)
+
+    }
+    console.log(new_numss) /// [4, 6, 10]
+
+
+    ///Creating a new array without duplication
+    const old_nums = [2,2,3,3,5]
+    let new_nums = []
+    for(let i = 0; i < old_nums.length; i++){
+      const itemss = old_nums[i]
+      new_nums.includes(itemss) ? new_nums : new_nums.push(itemss)
+    // new_nums.push(itemss+itemss)
+
+    }
+    console.log(new_nums) /// [4, 6, 10]
+  </script>
+</body>
+</html>

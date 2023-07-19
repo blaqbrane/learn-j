@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    ////Objects helps us group different values together and also use multiply values together
+    //// objects are written with curly bracket
+
+    const newObject ={
+      name: 'KC',
+      age: 43
+    }
+    console.log(newObject)
+    ///Acessing individual properties of the object using the dot('.') notation.
+
+    // console.log(newObject.name) //=== KC
+    // console.log(newObject.age) //=== 43
+
+    ///Acessing individual properties of the object using the bracket(['']) notation.
+    console.log(newObject['name']) // KC
+    console.log(newObject['age']) // KC
+
+    ///Mutating/changing a property of an object
+    newObject.name = 'Favour';
+    console.log(newObject) // newObject === {name: 'Favour', age: 43}
+    
+    ///Adding a new property to the object
+
+    newObject.country = 'Canada'
+    console.log(newObject) /// newObject === {name: 'Favour', age: 43, country: 'Canada'}
+
+    // Deleting a property from an object
+
+    delete newObject.name 
+    console.log(newObject) /// newObject === {age: 43, country: 'Canada'}, we have deleted the name property
+
+      ///A function inside an object is called a method
+     /// e.g
+
+     const checks = {
+      id:1,
+      ///Normal method
+      checkF: function newFunc(){
+        console.log('Function inside object')
+      },
+
+      ///Shorthand method
+      checkFun(){
+        console.log('Function inside objec')
+      }
+     }
+
+     ///accessing the function inside object
+     checks.checkFun()
+
+     ///Also console.log is a method, because console is an object while log is a function inside the console object, 
+
+     ///JSON does not support function inside an object.
+
+
+     const foods ={
+      name : 'chidi',
+      age:30,
+      sex:'Male'
+     }
+
+     ///JSON (Javascript object notation )
+     ///To convert Javascript object to JSON you use JSON.stringify() this is also a method, since JSON is an object and stringify is a function, hence we are accessing a function inside an object
+
+
+     console.log(JSON.stringify(foods)) /// === {"name":"chidi","age":30,"sex":"Male"}
+
+     ///To convert JSON back to an object use JSON.parse()
+     const json_object = JSON.stringify(foods)
+     console.log(JSON.parse( json_object))
+
+
+
+     //// Autoboxing is process whereby javascript wraps a string into a special object so that it can access a function property e.g
+
+     const name = 'Chidera'
+     const name_length = name.length
+     console.log(name_length)
+     
+     ///Here name is a string but javascript converts it into a special object using autoboxing so that it can access the properties of an object
+
+     ///Autoboxing works with boolean and numbers but doesn't work with null and undefined
+
+
+     //// Objects are reference, when an object is created, it is stored in computers memory and we only get access to the reference of that ojects and not the actual ojects e.g below.
+
+     //Remember we cannot change a variable declared with 'const' but since we are making a reference to an object, we can change the property of an object
+
+     const name1 = {
+      message:'come'
+     }
+     ///Here name2 is not a copy of name1 but a reference to the value of name1
+     const name2 = name1;
+     name1.message = 'Good name';
+     console.log(name1)
+
+     ///When we are comparing two objects, we are actually comparing the reference to those objects and not the actuall object.
+
+     console.log(name1 === name2) // true
+
+
+
+     ///Accessing the property of an object by destructing the object e.g
+
+     const homes ={
+      place:'mayor',
+      locas:'haven'
+     }
+     const{place,locas} = homes
+     console.log(place)
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom2</title>
+  <style>
+      .html-btn{
+        border:none;
+        color:white;
+        background-color: black;
+        padding:6px 10px 6px 10px;
+        border-radius: 20px;
+      }
+      .bg_gradient{
+        background: red;
+        padding:6px 10px 6px 10px;
+        border-radius: 20px;
+      }
+      .input_style{
+        padding:10px;
+        border-radius: 4px;
+      }
+      .btn_style{
+        padding: 11px;
+        color:white;
+        border:none;
+        background-color: rgb(4, 190, 4);
+      }
+  </style>
+</head>
+<body>
+  <p>YouTue Subscribe Button</p>
+  <button class="js-btn html-btn" onclick="handleClick()">Subscribe</button>
+
+  <p>Rock Paper Scissor</p>
+  <a href="rockpaper.html">Click here</a>
+
+  <br>
+  <p>Amaon Shipping calculator</p>
+  <p>Orders under $40 = +$10 shipping</p>
+  <p>Orders over $50 = FREE shipping </p>
+
+  <input class="input_style" id="input1" type="text" placeholder="Cost of order" onkeydown="handleKeyDown()"/>
+
+  <button class="btn_style" onclick="handleCalculate()">Calculate</button>
+
+  <p id="show_val"></p>
+
+  <script>
+    const js_btn_element = document.querySelector('.js-btn')
+
+    const input_element = document.getElementById('input1')
+    
+    const display_val = document.getElementById('show_val')
+
+    const handleClick =()=>{
+      
+      if(js_btn_element.textContent === 'Subscribe'){
+        js_btn_element.textContent = 'Subscribed'
+
+        ///adding a new when the subscribe button is clicked using the classList.add then the name of the new class 
+        js_btn_element.classList.add('bg_gradient')
+      } else{
+        js_btn_element.textContent = 'Subscribe'
+
+         ///removing the class using  classList.remove- then the name of the new class
+        js_btn_element.classList.remove('bg_gradient')
+      }
+
+    }
+
+    const handleCalculate = () =>{
+      input_val = parseInt(input_element.value);
+      if(input_val < 40 ){
+        display_val.textContent = `$${(input_val +=10)}`
+      }else if (input_val >= 50)(
+       display_val.textContent = `$${(input_val)}`
+      )
+      console.log(input_val)
+    }
+
+    const handleKeyDown =()=>{
+      if(event.key === 'Enter'){
+        handleCalculate()
+      }
+    }
+  </script>
+</body>
+</html>

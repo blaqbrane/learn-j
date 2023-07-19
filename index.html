@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blaqrane</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  
+  <button onclick="handleClick()" title="Ninjas" style="color:red">Hello Ninjas</button>
+  <h1 >How are you</h1>
+  <p id="namess">0</p>
+  <div>
+    <h1>Shopping cart</h1>
+    <button class="btn1" onclick="handleClick()">Add to cart <span id="names">0 </span></button>
+    <button class="btn2">Buy Now</button>
+  </div>
+
+  <script>
+    let count = 0 
+    const vals = document.getElementById('names')
+    const handleClick = () =>{
+    count++
+    vals.textContent = count                                    
+   }
+   
+   let c = 20
+   let r = 30
+
+   if(c > 30 || r > 40){
+      console.log('sucess')
+   }else{
+    console.log('failed')
+   }
+  </script>
+</body>
+</html>

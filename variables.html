@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  
+  <button onclick="handleClick()" title="Ninjas" style="color:red">Hello Ninjas</button>
+  <h1 >How are you</h1>
+  <p id="namess"></p>
+  <div>
+    <h1>Shopping cart</h1>
+    <button class="btn1" >Show Quantity <span id="names"> </span></button>
+    <button class="btn2" onclick="handleClick('1')">1</button>
+    <button class="btn2" onclick="handleClick('2')">2</button>
+    <button class="btn2" onclick="handleClick('3')">3</button>
+    <button class="btn2" onclick="handleClick('4')">4</button>
+    <button class="btn2" onclick="handleClick('5')">5</button>
+    <button class="btn2" onclick="handleClick('6')">6</button>
+    <button class="btn2" onclick="handleClick('7')">7</button>
+    <button class="btn2" onclick="handleClick('8')">8</button>
+    <button class="btn2" onclick="handleClick('9')">9</button>
+    <button class="btn2" onclick="handleClick('0')">0</button>
+    <button class="btn2" onclick="handleClick(' + ')">+</button>
+    <button class="btn2" onclick="handleClick(' - ')">-</button>
+    <button class="btn2" onclick="handleClick(' * ')">*</button>
+    <button class="btn2" onclick="handleClick(' / ')">/</button>
+    <button class="btn2" onclick="handleResult()">=</button>
+
+    <button class="btn2" onclick="handleReset()">Reset cart</button>
+  </div>
+
+  <script>
+    let count = ''
+    let calc = 0
+    const vals = document.getElementById('names')
+    const handleClick = (num) =>{
+
+      count=num + count
+      vals.textContent = count                                    
+   }
+   const handleResult = () => {
+    count = eval(count)
+    vals.textContent = count
+   }
+   const handleMinus = (num) =>{
+      count-=num
+      vals.textContent = count                                    
+   }
+   const handleReset = () => {
+    count = ''
+    vals.textContent = count 
+   }
+
+   let calculation = 4 + 4
+   let result = calculation + 3;
+
+
+
+  </script>
+</body>
+</html>
+
+
+<!-- 
+
+// //  reassigning a variable
+// let var2 = 'text'
+//     var2 = 'newtext'
+//  console.log(var2); -->
